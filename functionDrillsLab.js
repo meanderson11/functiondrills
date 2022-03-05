@@ -391,21 +391,22 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
-function inspectArrayAscending(arr) {
-  let balancingValue = arr[0]
-  for (let i = 1; i < arr.length - 1; i++) {
-    if (arr[i] <= balancingValue) {
+function inspectArrayAscending(arr){
+  for (let i = 1; i < arr.length - 1; i++){
+    const currentValue = arr[i]
+    const nextValue = arr[i + 1]
+
+    if (currentValue > nextValue){
       return false
-    } else {
-      comparisonValue = arr[i]
     }
   }
   return true
 }
 
-let arrayIsAscending = inspectArrayAscending(sampleArray)
-console.log(arrayIsAscending)
-////////////////// PROBLEM 22 ////////////////////
+const arrayIsAscending = inspectArrayAscending(sampleArray)
+console.log({ arrayIsAscending })
+
+// ////////////////// PROBLEM 22 ////////////////////
 
 let duck = "cute";
 
